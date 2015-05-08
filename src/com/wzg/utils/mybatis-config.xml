@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<settings>
+		<setting name="cacheEnabled" value="true" />
+	</settings>
+
+
+	<environments default="work">
+		<environment id="work">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="url" value="jdbc:mysql://127.0.0.1:3306/starland" />
+				<property name="username" value="root" />
+				<property name="password" value="root" />
+			</dataSource>
+		</environment>
+		<environment id="starland_server">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="url" value="jdbc:mysql://123.57.204.197:3306/starland" />
+				<property name="username" value="root" />
+				<property name="password" value="starland_root" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="com/starland/bean/UserMapper.xml" />
+		<mapper resource="com/starland/bean/BanjiMapper.xml" />
+		<mapper resource="com/starland/bean/Banji_xiaoxiMapper.xml" />
+		<mapper resource="com/starland/bean/Banji_memberMapper.xml" />
+		<mapper resource="com/starland/bean/Banji_liuyanMapper.xml" />
+		<mapper resource="com/starland/bean/Banji_liuyan_pinglunMapper.xml" />
+		<mapper resource="com/starland/bean/RijiMapper.xml" />
+		<mapper resource="com/starland/bean/Riji_pinglunMapper.xml" />
+		<mapper resource="com/starland/bean/UserXiaoXiMapper.xml" />
+		<mapper resource="com/starland/bean/Games_listMapper.xml" />
+		<mapper resource="com/starland/bean/User_guideMapper.xml" />
+		<mapper resource="com/starland/bean/System_XiaoXiMapper.xml" />
+		<mapper resource="com/starland/bean/Month_CardMapper.xml" />
+		<mapper resource="com/starland/bean/QiandaoMapper.xml" />
+		<mapper resource="com/starland/bean/Chong_zhiMapper.xml" />
+		<mapper resource="com/starland/bean/User_up_down_timeMapper.xml" />
+		<mapper resource="com/starland/bean/FriendsMapper.xml" />
+		<mapper resource="com/starland/bean/Friend_requestMapper.xml" />
+		<mapper resource="com/starland/bean/Game1_answersMapper.xml" />
+		<mapper resource="com/starland/bean/Game1_daoju_xiaohaoMapper.xml" />
+		<mapper resource="com/starland/bean/Game1_guankaMapper.xml" />
+		<mapper resource="com/starland/bean/Game1_roseMapper.xml" />
+		<mapper resource="com/starland/bean/Game1_user_daojuMapper.xml" />
+		<mapper resource="com/starland/bean/Danji_gameMapper.xml" />
+		<mapper resource="com/starland/bean/Danji_ChongZhiMapper.xml" />
+		<mapper resource="com/starland/bean/AnySDKDanjiChongZhiMapper.xml" />
+		<mapper resource="com/starland/bean/TestMapper.xml" />
+
+	</mappers>
+</configuration>
